@@ -122,7 +122,7 @@ the calculation speed of the disparity part takes **50ms**, the overall performa
 
 A: 
 * Speed of code run using numba is comparable to that of similar code in C, C++ or Fortran.
-* Fastmath, Parallel,  Intel SVML supported.
+* Fastmath, Parallel,  Intel SVML, CUDA supported.
 See also:
 
 [A ~5 minute guide to Numba](https://numba.pydata.org/numba-doc/latest/user/5minguide.html) 
@@ -137,5 +137,5 @@ A: While concatenate the search range under `line 11` of the `Algorithm 2: Left 
 
 
 ## To do
-1. Keep programming until parallel calculation and @jit works for full code.
+1. Refine the scripts until parallel calculation and @jit works for full code. See process performance may reach 4 fps.
 2. Write the code in C++ or CUDA C.
