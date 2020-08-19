@@ -124,3 +124,7 @@ See also:
 **Q: Once turn on all comments marked on numba line (speed up all), especially the main `Left_Disparity_Map()`, the error of numba would pop up.**
 
 A: While concatenate the search range under `line 11` of the `Algorithm 2: Left disparity map estimation`, some recieved temporal disparity list may empty. We have to provide the explicit dtype to numba. Works still need to be done.
+
+
+## To do
+Write the code in C++ or CUDA C.
