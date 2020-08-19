@@ -117,7 +117,7 @@ the calculation speed of the disparity part takes **50ms**, the overall performa
 | Old NCC |  30|------ |------ |------ | ------ | 
 | New NCC | 50 |------ |------ |8 | 18| 
 
-## Know Issues 
+## Known Issues 
 **Q: Why numba?**
 
 A: 
