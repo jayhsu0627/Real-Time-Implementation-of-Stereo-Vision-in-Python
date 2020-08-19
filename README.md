@@ -22,6 +22,52 @@ pip install <below_packages>
 5. scipy (not mandatory)
 6. numba (suggested)
 
+My laptop has a `i7-4702HQ`  CPU, detailed hardware information
+```sh
+H/W path                 Device           Class          Description
+====================================================================
+                                          system         Dell Precision M3800 (D
+/0                                        bus            Dell Precision M3800
+/0/0                                      memory         64KiB BIOS
+/0/2f                                     processor      Intel(R) Core(TM) i7-47
+/0/2f/4                                   memory         256KiB L1 cache
+/0/2f/5                                   memory         1MiB L2 cache
+/0/2f/6                                   memory         6MiB L3 cache
+/0/7                                      memory         8GiB System Memory
+/0/7/0                                    memory         4GiB SODIMM DDR3 Synchr
+/0/7/1                                    memory         4GiB SODIMM DDR3 Synchr
+/0/100                                    bridge         Xeon E3-1200 v3/4th Gen
+/0/100/1                                  bridge         Xeon E3-1200 v3/4th Gen
+/0/100/1/0                                display        GK107GLM [Quadro K1100M
+/0/100/2                                  display        4th Gen Core Processor 
+/0/100/3                                  multimedia     Xeon E3-1200 v3/4th Gen
+/0/100/4                                  generic        Intel Corporation
+
+架构：           x86_64
+CPU 运行模式：   32-bit, 64-bit
+字节序：         Little Endian
+CPU:             8
+在线 CPU 列表：  0-7
+每个核的线程数： 2
+每个座的核数：   4
+座：             1
+NUMA 节点：      1
+厂商 ID：        GenuineIntel
+CPU 系列：       6
+型号：           60
+型号名称：       Intel(R) Core(TM) i7-4702HQ CPU @ 2.20GHz
+步进：           3
+CPU MHz：        897.292
+CPU 最大 MHz：   3200.0000
+CPU 最小 MHz：   800.0000
+BogoMIPS：       4390.13
+虚拟化：         VT-x
+L1d 缓存：       32K
+L1i 缓存：       32K
+L2 缓存：        256K
+L3 缓存：        6144K
+NUMA 节点0 CPU： 0-7
+```
 ## To Use
 ### numba
 Please visit [numba](https://github.com/numba/numba) to see full version of instruction.
@@ -64,7 +110,14 @@ The new version contains a faster calculation of NCC with the help of cv2, the f
 **Return:** Disparity
 the calculation speed of the disparity part takes 50ms, the overall performance is not as good as the old version.
 
-## Know Issues
+## Know Issues 
+**Q: Why numba?**
+
+A: 
+See also:
+[A ~5 minute guide to Numba](https://numba.pydata.org/numba-doc/latest/user/5minguide.html) 
+[Performance Tips](https://numba.pydata.org/numba-doc/latest/user/performance-tips.html#performance-tips)
+
 **Q: Once turn on all comments marked on numba line (speed up all), especially the main `Left_Disparity_Map()`, the error of numba would pop up.**
 
 A: While concatenate the search range under `line 11` of the `Algorithm 2: Left disparity map estimation`, some recieved temporal disparity list may empty. We have to provide the explicit dtype to numba. Works still need to be done.
