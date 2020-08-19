@@ -116,7 +116,10 @@ the calculation speed of the disparity part takes 50ms, the overall performance 
 A: 
 See also:
 [A ~5 minute guide to Numba](https://numba.pydata.org/numba-doc/latest/user/5minguide.html) 
+
 [Performance Tips](https://numba.pydata.org/numba-doc/latest/user/performance-tips.html#performance-tips)
+
+[Speed Up your Algorithms Part 2— Numba](https://towardsdatascience.com/speed-up-your-algorithms-part-2-numba-293e554c5cc1)
 
 **Q: Once turn on all comments marked on numba line (speed up all), especially the main `Left_Disparity_Map()`, the error of numba would pop up.**
 
