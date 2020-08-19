@@ -138,4 +138,5 @@ A: While concatenate the search range under `line 11` of the `Algorithm 2: Left 
 
 ## To do
 1. Refine the scripts until parallel calculation and @jit works for full code. See process performance may reach 4 fps.
-2. Write the code in C++ or CUDA C.
+2. Refine into CUDA supported version numba sytle script. 
+3. Write the code in C++ or CUDA C.
