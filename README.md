@@ -112,10 +112,10 @@ The new version contains a faster calculation of NCC with the help of cv2, the f
 the calculation speed of the disparity part takes **50ms**, the overall performance is not as good as the old version.
 (UPDATED UNTIL 8/19/2020)
 
-| Runtime (ms) | 8/19/2020 |  |  |
-| ------ | ------ |------ |------ |
-| Old NCC |  30|------ |------ |
-| New NCC | 50 |------ |------ |
+| Runtime (ms) | 8/19/2020 |  |  |Goal 1 thread|Goal 8 thread|
+| ------ | ------ |------ |------ |  ------ | ------ | 
+| Old NCC |  30|------ |------ |------ | ------ | 
+| New NCC | 50 |------ |------ |8 | 18| 
 
 ## Know Issues 
 **Q: Why numba?**
