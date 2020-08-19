@@ -41,13 +41,13 @@ def func()
 
 **Return:** matches and filtered_match
 
-### Step2. Perspective transformation(cell_2)
+### Step2. Perspective transformation code(cell_2)
 
 **Input:**  filtered_match
 
 **Return:** slope and intercept, shifted image pairs
 
-### Step3. Disparity Old(cell_3)
+### Step3. Disparity Old (cell_3)
 The old version contains a straight calculation of **Normalized Cross Correlation**(NCC), the function was built under function (1) of the original paper. Meanwhile, integral image of mean and SD is calculated for index calculation under paper's suggestion.
 
 **Input:**  shifted image pairs
@@ -55,7 +55,7 @@ The old version contains a straight calculation of **Normalized Cross Correlatio
 **Return:** Disparity
 the calculation speed of the disparity part takes 30ms
 
-### Step3. Disparity New(cell_4)
+### Step3. Disparity New (cell_4)
 
 The new version contains a faster calculation of NCC with the help of cv2, the function was built under function (8) of the original paper. The 'faster' conclusion comes from the performance comparison in cell_6 and cell_7 (Please uncomment #line 73-74 in cell_7 ).
 
@@ -63,3 +63,7 @@ The new version contains a faster calculation of NCC with the help of cv2, the f
 
 **Return:** Disparity
 the calculation speed of the disparity part takes 50ms, the overall performance is not as good as the old version.
+
+## Know Issues
+**Q: Once turn on all comments marked on numba line (speed up all), especially the main `Left_Disparity_Map()`, the error of numba would pop up.**
+A: While concatenate the search range under `line 11` of the `Algorithm 2: Left disparity map estimation`, some recieved temporal disparity list may empty. We have to provide the explicit dtype to numba. Works still need to be done.
