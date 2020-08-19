@@ -21,3 +21,23 @@ pip install <below_packages>
 4. matplotlib
 5. scipy (not mandatory)
 6. numba (suggested)
+
+## To Use
+### numba
+Please visit [numba](https://github.com/numba/numba) to see full version of instruction.
+To turn on numba speed-up, please uncomment the line above each function block
+```sh
+@jit(nopython=True)  <----
+def func()
+    ```
+    ```
+    return
+```
+To turn off, please comment the line above each function block
+```sh
+# @jit(nopython=True)  <----
+def func()
+    ```
+    ```
+    return
+```
