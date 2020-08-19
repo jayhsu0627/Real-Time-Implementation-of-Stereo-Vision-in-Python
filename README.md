@@ -99,7 +99,8 @@ The old version contains a straight calculation of **Normalized Cross Correlatio
 **Input:**  shifted image pairs
 
 **Return:** Disparity
-the calculation speed of the disparity part takes 30ms
+the calculation speed of the disparity part takes **30ms**
+(UPDATED UNTIL 8/19/2020)
 
 ### Step3. Disparity New (cell_4)
 
@@ -108,8 +109,8 @@ The new version contains a faster calculation of NCC with the help of cv2, the f
 **Input:**  shifted image pairs
 
 **Return:** Disparity
-the calculation speed of the disparity part takes 50ms, the overall performance is not as good as the old version.
-
+the calculation speed of the disparity part takes **50ms**, the overall performance is not as good as the old version.
+(UPDATED UNTIL 8/19/2020)
 ## Know Issues 
 **Q: Why numba?**
 
