@@ -131,4 +131,5 @@ A: While concatenate the search range under `line 11` of the `Algorithm 2: Left 
 
 
 ## To do
-Write the code in C++ or CUDA C.
+1. Keep programming until parallel calculation and @jit works for full code.
+2. Write the code in C++ or CUDA C.
